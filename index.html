@@ -501,3 +501,26 @@
 	</select>
 	
 </p>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(function(){
+    showStateInput();
+    $('#country').change(function(){
+        showStateInput();
+    });
+});
+
+function showStateInput() {
+    var country = $('#country option:selected').val();
+    $('#states input, #states select').removeAttr('name').hide();
+    if ($('#states select#' + country).length == 0) {
+        $('#freestate').show().attr('name', 'state');
+    } else {
+        $('#states select#' + country).show().attr('name', 'state');
+    }
+} 
+
+</script>
