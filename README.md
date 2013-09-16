@@ -1,9 +1,9 @@
 Conditional 'state' selector for shipping forms
 ====================
 
-When creating your own int'l shipping form, certain countries will require a 'state' selection, for most other countries the 'state' field is either optional or not required.
+When creating your own int'l shipping form, certain countries will require a 'state' selection field, while for most other countries the 'state' field is either optional or not required.
 
-Based on my research, the following counties require a 'state' in their shipping address:
+Based on my research, the following countries must have a 'state' in their shipping address:
 
  * USA
  * Canada
@@ -13,7 +13,8 @@ Based on my research, the following counties require a 'state' in their shipping
  * Malaysia
  * Italy
 
-Here's a simple jQuery powered form that offers a textfield for 'state' by default and swaps it for a dropdown if any of the above countries are selected. 
+Here's a simple jQuery-powered form that offers a dropdown with prepopulated states/provinces if one of the above countries is selected (and a simple freeform fallback for all others).
 
-Country codes defined by ISO 3166-1.
+[View example here](http://jsfiddle.net/WJFSd/).
 
+Country codes based on ISO 3166-1.
